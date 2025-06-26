@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 
 router = APIRouter()
-
+#for addition
 @router.get("/add")
 def add(a: float, b: float):
     return {"result": a + b}
