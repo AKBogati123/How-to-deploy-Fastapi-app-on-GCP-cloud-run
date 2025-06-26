@@ -5,7 +5,7 @@ router = APIRouter()
 @router.get("/add")
 def add(a: float, b: float):
     return {"result": a + b}
-
+#for subtraction
 @router.get("/subtract")
 def subtract(a: float, b: float):
     return {"result": a - b}
