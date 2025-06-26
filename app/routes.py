@@ -13,7 +13,7 @@ def subtract(a: float, b: float):
 @router.get("/multiply")
 def multiply(a: float, b: float):
     return {"result": a * b}
-
+#for divide
 @router.get("/divide")
 def divide(a: float, b: float):
     if b == 0:
