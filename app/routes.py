@@ -9,7 +9,7 @@ def add(a: float, b: float):
 @router.get("/subtract")
 def subtract(a: float, b: float):
     return {"result": a - b}
-
+#for multiplication
 @router.get("/multiply")
 def multiply(a: float, b: float):
     return {"result": a * b}
