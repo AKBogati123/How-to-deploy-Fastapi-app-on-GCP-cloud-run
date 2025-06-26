@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+
+    <label>Number A: <input type="number" id="a" /></label><br>
+    <label>Number B: <input type="number" id="b" /></label><br><br>
+
+    <button onclick="calculate('add')">Add</button>
+    <button onclick="calculate('subtract')">Subtract</button>
+    <button onclick="calculate('multiply')">Multiply</button>
+    <button onclick="calculate('divide')">Divide</button>
+
+    <h2>Result: <span id="result"></span></h2>
+
+    <script>
+        function calculate(operation) {
+            const a = document.getElementById("a").value;
+            const b = document.getElementById("b").value;
+
+            fetch(`/${operation}?a=${a}&b=${b}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.result !== undefined) {
+                        document.getElementById("result").innerText = data.result;
+                    } else if (data.detail) {
+                        document.getElementById("result").innerText = data.detail;
+                    } else {
+                        document.getElementById("result").innerText = "Unexpected error";
+                    }
+                });
+        }
+    </script>
+</body>
+</html>
