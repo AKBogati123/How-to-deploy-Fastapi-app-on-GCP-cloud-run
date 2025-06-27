@@ -1,14 +1,5 @@
 # How-to-deploy-Fastapi-app-on-GCP-cloud-run
-Perfect! Here's a **fully rewritten `README.md`** in simple language — ideal for beginners — that:
 
-✅ Starts with the **project structure**
-✅ Explains **prerequisites** like Google Cloud subscription and keys
-✅ Covers how to **clone, run locally**, and
-✅ Walks through **CI/CD deployment step-by-step**
-
----
-
-```markdown
 # 🌐 FastAPI Cloud Deployment Project with CI/CD (Beginner-Friendly)
 
 This project shows how to build a small web API using **FastAPI** and **deploy it to Google Cloud Run automatically** using **GitHub Actions (CI/CD)**.
