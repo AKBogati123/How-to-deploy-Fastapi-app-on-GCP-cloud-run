@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
-from routes import router
+from .routes import router
 
 app = FastAPI()
 app.include_router(router)
